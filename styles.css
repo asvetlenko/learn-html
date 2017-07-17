@@ -35,7 +35,7 @@ body {
 .content {
 	margin-left: 15px;
 	margin-top: 15px;
-	border: 1px dashed #999;
+	border: 1px dashed #AAA;
 	border-right: none;
 	border-bottom: none;
 }
@@ -55,7 +55,7 @@ p.caption {
 h1 {
 	font: normal 2.4em Verdana, Arial, Helvetica, sans-serif;
 	margin: 0;
-	border-bottom: 1px dashed #999;
+	border-bottom: 1px dashed #AAA;
 	padding: 5px 0 5px 8px;
 	color: #14556b;
 }
@@ -67,23 +67,27 @@ p {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 1em;
 	text-transform: uppercase;
-	color: #666666;
+	color: #777777;
 	margin-left: 0px;
 	padding-left: 8px;
-	border-top: 1px dashed #999;
+	border-top: 1px dashed #AAA;
 	clear: both;
 }
 
 figure {
-	float: right;
-	width: 222px;
-	margin: 15px 10px 5px;
+	/*float: left;*/
+	display: inline-block;
+	vertical-align: top;
+
+	width: 210px;
+	margin: 0 10px 10px 10px
 }
 
 figure img {
-	border: 1px solid #666;
+	border: 1px solid #777;
 	background-color: #CCC;
-	padding: 10px
+	padding: 4px;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
 }
 
 figcaption {
@@ -91,6 +95,7 @@ figcaption {
 	color: #333;
 	text-align: center;
 	background-image: linear-gradient(to bottom, #e6f3ff, white);
-	border: 1px dashed #666;
-	padding: 5px;
+	border: 1px dashed #777;
+	/*padding: 5px;*/
+	margin: 10px 0 0 0;
 }
