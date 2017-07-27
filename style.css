@@ -1,50 +1,31 @@
-a {
-    color: #207EBF;
-    text-decoration: none;
-    font-weight: bold;
-    border-bottom: 2px solid #FF6600;
+div {
+    background:#fcf8b3;
+    border:1px solid #aaa;
+    margin:10px;
+    padding:10px;
+    width:330px;
 }
 
-a:visited {
-    color: #6E97BF;
+div:hover {
+    cursor:pointer;
 }
 
-a:hover {
-    color: #FFFFFF;
-    background-color: #6E97BF;
-    border-bottom-color: #6E97BF;
+.first {
+    transition:transform 0.2s ease-in-out;
 }
 
-a[href^="mailto:"] {
-    color: #777777;
-    border: none;
-    background: url(images/email.gif) no-repeat left center;
-    padding: 20px;
-    margin-left: 10px;
+.first:hover {
+    transform:scale(1.2) rotate(-15deg) skew(-5deg, 30deg);
 }
 
-.resources a {
-    border-bottom: none;
-    padding-right: 22px;
+.second {
+    margin: 150px 0 0 150px;
+
+    transform:rotate(-45deg);
 }
 
-.resources a[href*='://'] {
-    background: url("images/globe.png") no-repeat right top;
+.second:hover {
+    transform-origin: 0 0;
 }
 
-.resources a[href$='.pdf'] {
-    background: url("images/acrobat.png") no-repeat right top;
-}
 
-.resources a[href$='.zip'] {
-    background: url("images/zip.png") no-repeat right top;
-}
-
-.resources a[href$='.doc'] {
-    background: url("images/word.png") no-repeat right top;
-}
-
-.resources a:hover {
-    color: #000;
-    background-color: rgba(255, 255, 255, .8);
-}
