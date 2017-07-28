@@ -11,7 +11,7 @@ div:hover {
 }
 
 .first {
-    transition:transform 0.2s ease-in-out;
+    transition:transform 0.2s ease-in-out 1s;
 }
 
 .first:hover {
@@ -19,13 +19,70 @@ div:hover {
 }
 
 .second {
-    margin: 150px 0 0 150px;
+    margin: 200px 0 0 350px;
 
-    transform:rotate(-45deg);
+    /*transition:transform 0.2s ;
+
+    transition-property: transform;
+    transition-duration: 5s;
+    transition-timing-function: ease-in;
+    */
 }
 
 .second:hover {
-    transform-origin: 0 0;
+    transform:rotate(-45deg);
 }
 
+.navButton {
+    background-color: lightyellow;
+    color: black;
+    border-color: red;
 
+    transition-property: background-color, border-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 5s;
+
+}
+
+.navButton:hover {
+    background-color: blue;
+    transition-delay: 0s;
+    /*color: white;*/
+    /*border-color: paleturquoise;*/
+}
+
+@keyframes fadeIn {
+    from {
+        background-color: orange;
+        animation-timing-function: cubic-bezier(2, 0.03, 2, 0.01);
+    }
+
+    50% {
+        transform: scale(1.5);
+        background-color: blue;
+        animation-timing-function: linear;
+    }
+
+    to {
+        transform: scale(3);
+        background-color: red;
+    }
+}
+
+.second {
+    animation-name: fadeIn;
+    animation-duration: 7s;
+    animation-delay: 2s;
+
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+
+
+    /*animation-fill-mode: forwards;*/
+}
+
+.second:hover {
+    transform:rotate(-45deg);
+    animation-play-state: paused;
+}
